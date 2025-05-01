@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Category Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Same navbar/header as home page */
+    header {
+      background-color:  #a7fff0;
+      color: rgb(0, 0, 0);
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: rgb(255, 255, 255);
+    }
+
+    /* Products Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    /* Each Product Card */
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s;
+      padding-bottom: 1rem;
+      position: relative;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      margin-top: 1rem;
+    }
+    .product-name {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      font-weight: 600;
+    }
+    .product-weight {
+      color: gray;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    .price-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .price {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 0.9rem;
+    }
+    .add-btn {
+      background-color: #0a5;
+      color: rgb(255, 255, 255);
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .add-btn:hover {
+      background-color: #087c4c;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Same header as home page -->
+  <header>Baby Care :</header>
+
+  <!-- Products Grid -->
+  <div class="products-grid">
+    
+    <!-- Product 1 MamyPoko Pants Standard Diaper (S, 4-8 kg)-->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/app/assets/products/sliding_images/jpeg/788bf9d0-3cbe-4a82-925e-2b0c0ff1c96c.jpg?ts=1720377316" alt="diaper">
+      <div class="product-name">MamyPoko Pants Standard Diaper (S, 4-8 kg)</div>
+      <div class="product-weight">60 pcs</div>
+      <div class="price-row">
+        <div class="price">₹417</div>
+        <div class="old-price">₹599</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 2 Himalaya Gentle Baby Shampoo -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/da/cms-assets/cms/product/1cd329ad-2790-48f2-ad67-b31fc0452671.jpg?ts=1745468094" alt="shampoo">
+      <div class="product-name">Himalaya Gentle Baby Shampoo</div>
+      <div class="product-weight">200 ml</div>
+      <div class="price-row">
+        <div class="price">₹171</div>
+        <div class="old-price">₹220</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 3 Little's Baby Wipes with lid-->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/app/images/products/sliding_image/501061a.jpg?ts=1697697388" alt="Maggi">
+      <div class="product-name">Little's Baby Wipes with lid</div>
+      <div class="product-weight">1 pack(80 wipes)</div>
+      <div class="price-row">
+        <div class="price">₹86</div>
+        <div class="old-price">₹220</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 4 Mamaearth Natural Mosquito Repellent Patch-->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/app/images/products/sliding_image/424427a.jpg?ts=1687328711" alt="Maggi">
+      <div class="product-name">Mamaearth Natural Mosquito Repellent Patch</div>
+      <div class="product-weight">24 units</div>
+      <div class="price-row">
+        <div class="price">₹227</div>
+        <div class="old-price">₹249</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+        <!-- Product 5 Cetaphil Daily Baby Lotion-->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/app/assets/products/sliding_images/jpeg/0ef0eb76-9525-4620-ad5a-ef2694eac782.jpg?ts=1720594862" alt="Maggi">
+      <div class="product-name">Cetaphil Daily Baby Lotion</div>
+      <div class="product-weight">400 ml</div>
+      <div class="price-row">
+        <div class="price">₹846</div>
+        <div class="old-price">₹950</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    <!-- Product 6 Johnson's Baby Gift Set-->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/da/cms-assets/cms/product/89e3e9a4-f897-489b-a2e7-71999df7b1fd.jpg?ts=1735923513" alt="Maggi">
+      <div class="product-name">Johnson's Baby Gift Set</div>
+      <div class="product-weight">1 pack (11 pieces)</div>
+      <div class="price-row">
+        <div class="price">₹1410</div>
+        <div class="old-price">₹1500</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+  </div>
+  <script>
+    // Initialize cart in localStorage if not present
+    if (!localStorage.getItem("cart")) {
+      localStorage.setItem("cart", JSON.stringify([]));
+    }
+  
+    // Add to Cart Function
+    function addToCart(productName, productPrice) {
+      const cart = JSON.parse(localStorage.getItem("cart"));
+      cart.push({ name: productName, price: parseFloat(productPrice.replace('₹', '')) });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`${productName} added to cart!`);
+    }
+  
+    // Attach event listeners to all ADD buttons
+    document.querySelectorAll(".product-card").forEach(card => {
+      const name = card.querySelector(".product-name").textContent;
+      const price = card.querySelector(".price").textContent;
+      const btn = card.querySelector(".add-btn");
+      btn.addEventListener("click", () => addToCart(name, price));
+    });
+  </script>
+
+</body>
+</html>

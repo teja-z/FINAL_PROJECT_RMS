@@ -1,0 +1,424 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RMS SVNIT</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}" />
+  <script src="{% static 'js/script.js' %}"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 40px;
+      text-align: center;
+      font-size: 14px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-content a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .footer-content a:hover {
+      text-decoration: underline;
+    }
+
+    .social-media {
+      margin: 10px 0;
+    }
+
+    .contact-info p, .address p {
+      margin: 5px 0;
+    }
+
+    .footer-section {
+      margin-bottom: 30px;
+    }
+
+    .quick-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .newsletter input[type="email"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      width: 250px;
+    }
+
+    .newsletter button {
+      padding: 10px;
+      background-color: #5cb85c;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .newsletter button:hover {
+      background-color: #4cae4c;
+    }
+</style>
+
+</head>
+<body>
+  <header class="navbar">
+  {% load static %}
+  <div class="logo">
+    <img src="{% static 'images/logo.png' %}" alt="Logo" style="height: 60px; width: 200px;" />
+  </div>
+    <select class="location-select">
+      <option selected disabled>Select Location</option>
+      <option>Gajjar Bhavan</option>
+      <option>EWS</option>
+      <option>Swami Bhavan</option>
+      <option>Bhaba Bhavan</option>
+      <option>Taigor Bhavan</option>
+      <option>Neharu Bhavan</option>
+      <option>MTB</option>
+      <option>Staff Club</option>
+      <option>Gate 2</option>
+      <option>Old CRC</option>
+      <option>Admistation Building</option>
+      <option>AI Department</option>
+      <option>SAC Ground</option>
+    </select>
+
+
+  </select>
+  <input type="text" class="search-bar" id="searchBar" placeholder="Search for products..." />
+  <button onclick="runSearch()">🔍</button>
+  <div class="search-results" id="resultBox"></div>
+  <script>
+    const products = [
+      { name: "Amul Gold Full Cream Milk", link: "{% url 'dairy' %}" },
+      { name: "Amul Taaza Toned Milk", link: "{% url 'dairy' %}" },
+      { name: "Super fast Keval Bread", link: "{% url 'dairy' %}" },
+      { name: "Super Crustless Big Slice White Bread", link: "{% url 'dairy' %}" },
+      { name: "Kellogg's Double Chocolaty Fills Chocos (Crunchy Outside, Creamy Inside)", link: "{% url 'dairy' %}" },
+      { name: "Kellogg's Corn Flakes with Immuno Nutrients", link: "% url 'dairy' %" },
+
+      { name: "Cold Drink CocaCola", link: "{% url 'cold_drink' %}" },
+      { name: "Thums Up Soft Drink (750 ml)", link: "{% url 'cold_drink' %}" },
+      { name: "Sprite Lime Flavored Soft Drink 750 ml", link: "{% url 'cold_drink' %}" },
+      { name: "Coca-Cola Diet Coke Soft Drink", link: "{% url 'cold_drink' %}" },
+      { name: "Coca-Cola Soft Drink (750 ml)", link: "{% url 'cold_drink' %}" },
+
+      { name: "Kurkure Masala Munch Crisps", link: "{% url 'snacks' %}" },
+      { name: "Lay's India's Magic Masala Potato Chips", link: "{% url 'snacks' %}" },
+      { name: "Kurkure Solid Masti Masala Twisteez Crisps", link: "{% url 'snacks' %}" },
+      { name: "Lay's Chile Limon Flavour Potato Chips ", link: "{% url 'snacks' %}" },
+      { name: "Balaji Moong Dal Namkeen", link: "{% url 'snacks' %}" },
+      { name: "Balaji Murmura Sev Bhujia", link: "{% url 'snacks' %}" },
+
+      { name: "Maggi 2 - Minute Instant Noodles (Pack of 12)", link: "{% url 'instant_food' %}" },
+      { name: "Maggi Cuppa Masala Cup Noodles", link: "{% url 'instant_food' %}" },
+      { name: "Yippee Magic Masala Instant Noodles with Added Veggies (240 g)", link: "{% url 'instant_food' %}" },
+      { name: "Ching's Secret Veg Hakka Noodles", link: "{% url 'instant_food' %}" },
+      { name: "Kellogg's Oats", link: "{% url 'instant_food' %}" },
+    
+      { name: "Farmley Date Bites Dry Fruit Burfi (No Added Sugar)", link: "{% url 'sweet' %}" },
+      { name: "Soan Papdi by Haldiram's Nagpur", link: "{% url 'sweet' %}" },
+      { name: "Ferrero Rocher Chocolate Gift Pack (24 pieces)", link: "{% url 'sweet' %}" },
+      { name: "Havmor Dark Chocolate Ice Cream Cone - Pack of 2", link: "{% url 'sweet' %}" },
+      { name: "Cadbury Dairy Milk Fruit & Nut Chocolate Bar", link: "{% url 'sweet' %}" },
+      { name: "Vadilal Matka Kulfi", link: "{% url 'sweet' %}" },
+      { name: "Cadbury Dairy Milk Bites Assorted Chocolate Pack - Almond", link: "{% url 'sweet' %}" },
+      { name: "Nestle KitKat Chunky Caramel Wafer Chocolates", link: "{% url 'sweet' %}" },
+
+      { name: "Kabhi B White Bread ", link: "{% url 'bakery' %}" },
+      { name: "Open Secret Celebration Chocolate Biscuits Gift Pack (Zero Maida)", link: "{% url 'bakery' %}" },
+      { name: "Britannia Marie Gold Marie Biscuits (208 g)", link: "{% url 'bakery' %}" },
+      { name: "Britannia Pure Magic Choco Stars Biscuit", link: "{% url 'bakery' %}" },
+      { name: "Britannia Treat Jim Jam Sandwich Cream Biscuits - Buy 4 Get 1 Free", link: "{% url 'bakery' %}" },
+      { name: "Britannia Pure Magic Choco Stars Biscuit", link: "{% url 'bakery' %} " },
+
+      { name: "Kissan Jam", link: "pages/10souce.html" },
+      { name: "Maggi Noodles", link: "pages/4instant.html" },
+      { name: "Dettol Sanitizer", link: "pages/13cleaning.html" },
+      { name: "Horlicks", link: "pages/7tea.html" },
+      // Add more products as needed
+    ];
+  
+    const searchInput = document.getElementById("searchBar");
+    const resultBox = document.getElementById("resultBox");
+  
+    // Live Suggestions
+    searchInput.addEventListener("input", () => {
+      const query = searchInput.value.toLowerCase().trim();
+      resultBox.innerHTML = "";
+      if (query === "") {
+        resultBox.style.display = "none";
+        return;
+      }
+      const matches = products.filter(p => p.name.toLowerCase().includes(query));
+      if (matches.length > 0) {
+        resultBox.style.display = "block";
+        matches.forEach(product => {
+          const item = document.createElement("div");
+          item.className = "search-item";
+          item.textContent = product.name;
+          item.onclick = () => window.location.href = product.link;
+          resultBox.appendChild(item);
+        });
+      } else {
+        resultBox.innerHTML = "<div class='search-item'>No products found</div>";
+        resultBox.style.display = "block";
+      }
+    });
+  
+    // Enter key handler
+    searchInput.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") runSearch();
+    });
+  
+    // Button click handler
+    function runSearch() {
+      const query = searchInput.value.toLowerCase().trim();
+      const match = products.find(p => p.name.toLowerCase().includes(query));
+      if (match) {
+        window.location.href = match.link;
+      } else {
+        alert("No matching product found.");
+      }
+    }
+  </script>
+    <a href="{% url 'login' %}" class="nav-btn">
+      <div class="nav-buttons">
+        <button class="nav-btn">LOGIN</button>
+      </div>
+    </a>
+
+    <a href="{% url 'cart' %}" class="nav-btn">
+      <div class="nav-buttons">
+        <button class="nav-btn">🛒</button>
+      </div>
+    </a>
+  </header>
+
+  <!-- Advertisement Grid -->
+  <section class="ad-banner-grid">
+
+    <a href="{% url 'dairy' %}" class="ad-link">
+      <div class="ad-item">
+        <button class="ad-card" style="background-image: url('https://www.shutterstock.com/image-photo/slice-whole-wheat-bread-breakfast-260nw-566605432.jpg');"></button>
+        <div class="ad-info">
+          <h3>Dairy, Bread</h3>
+          <p>Freshly baked and delivered!</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="{% url 'cold_drink' %}" class="ad-link">
+      <div class="ad-item">
+        <button class="ad-card" style="background-image: url('https://www.shutterstock.com/image-photo/poznan-poland-oct-28-2021-260nw-2071581119.jpg');"></button>
+        <div class="ad-info">
+          <h3>Cold Drinks & Juices</h3>
+          <p>Chill with cool drinks!</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="{% url 'snacks' %}" class="ad-link">
+      <div class="ad-item">
+        <button class="ad-card" style="background-image: url('https://cdn.grofers.com/da/cms-assets/cms/product/a462e780-3f6f-47df-a451-1e63791d175b.jpg?ts=1740848082');"></button>
+        <div class="ad-info">
+          <h3>Snacks & Munchies</h3>
+          <p>Craving something crunchy?</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="{% url 'instant_food' %}" class="ad-link">
+      <div class="ad-item">
+        <button class="ad-card" style="background-image: url('https://5.imimg.com/data5/ANDROID/Default/2022/3/QC/FB/QF/124753872/product-jpeg-500x500.jpg');"></button>
+        <div class="ad-info">
+          <h3>Breakfast & Instant Food</h3>
+          <p>Start your day right!</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="{% url 'sweet' %}" class="ad-link">
+      <div class="ad-item">
+        <button class="ad-card" style="background-image: url('https://www.giftacrossindia.com/media/catalog/product/g/a/gaicouchoc103.jpg');"></button>
+        <div class="ad-info">
+          <h3>Sweet Tooth</h3>
+          <p>Treat yourself to sweets!</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="{% url 'bakery' %}" class="ad-link">
+      <div class="ad-item">
+        <button class="ad-card" style="background-image: url('https://hogr.app/blog/wp-content/uploads/2022/03/WhatsApp-Image-2022-03-23-at-4.20.08-PM-1020x680-1.jpeg');"></button>
+        <div class="ad-info">
+          <h3>Bakery & Biscuits</h3>
+          <p>Freshly baked everyday!</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="{% url 'tea_coffee' %}" class="ad-link">
+      <div class="ad-item">
+        <button class="ad-card" style="background-image: url('https://media.istockphoto.com/id/1170898832/photo/warming-tea-with-honey-lemon-and-ginger.jpg?s=612x612&w=0&k=20&c=E91pFim80ZC9U_PEGiDfQLihmR_teLdFmTTctt3L3Ks=');"></button>
+        <div class="ad-info">
+          <h3>Tea, Coffee & Health Drink</h3>
+          <p>Time for a sip!</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="{% url 'atta_rice_dal' %}" class="ad-link">
+      <div class="ad-item">
+        <button class="ad-card" style="background-image: url('https://res.cloudinary.com/di87xd291/image/upload/v1718600475/products/qvdys3eceu9jbtwovpbf.webp');"></button>
+        <div class="ad-info">
+          <h3>Atta, Rice & Dal</h3>
+          <p>Staples at best prices!</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="{% url 'masala_oil' %}" class="ad-link">
+      <div class="ad-item">
+        <button class="ad-card" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTMVRMd04JIqC2MZyl6jm-R-IRq83uTJetOQ&s');"></button>
+        <div class="ad-info">
+          <h3>Masala, Oil & More</h3>
+          <p>Spice up your kitchen!</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="{% url 'sauce_spread' %}" class="ad-link">
+      <div class="ad-item">
+        <button class="ad-card" style="background-image: url('https://www.quickpantry.in/cdn/shop/collections/Spread_Sauce_Ketchup.png?crop=center&height=1200&v=1722450270&width=1200');"></button>
+        <div class="ad-info">
+          <h3>Sauces & Spreads</h3>
+          <p>Spread the flavor!</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="{% url 'baby_care' %}" class="ad-link">
+      <div class="ad-item">
+        <button class="ad-card" style="background-image: url('https://maate.in/cdn/shop/files/Baby_Wipes_Home_Banner_Mobile.jpg?v=1726950376&width=3840');"></button>
+        <div class="ad-info">
+          <h3>Baby Care</h3>
+          <p>Only the best for your baby!</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="{% url 'pharma_wellness' %}" class="ad-link">
+      <div class="ad-item">
+        <button class="ad-card" style="background-image: url('https://www.numeralifesciences.com/storage/blogs/zSftK8cKOBMkIj1sIRrGNCHe0QAArwtPbabxTy8E.jpeg');"></button>
+        <div class="ad-info">
+          <h3>Pharma & Wellness</h3>
+          <p>Stay fit and healthy!</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="{% url 'cleaning_essentials' %}" class="ad-link">
+      <div class="ad-item">
+        <button class="ad-card" style="background-image: url('https://m.media-amazon.com/images/I/61012VrK1OL.jpg');"></button>
+        <div class="ad-info">
+          <h3>Cleaning Essentials</h3>
+          <p>Keep it clean and fresh!</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="{% url 'personal_care' %}" class="ad-link">
+      <div class="ad-item">
+        <button class="ad-card" style="background-image: url('https://images.moneycontrol.com/static-mcnews/2021/11/iORA-Prebiotic-Skin-Care-Range-2-1-680x435.jpg?impolicy=website&width=770&height=431');"></button>
+        <div class="ad-info">
+          <h3>Personal Care</h3>
+          <p>Take care of yourself!</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="{% url 'love_corner' %}" class="ad-link">
+      <div class="ad-item">
+        <button class="ad-card" style="background-image: url('https://m.media-amazon.com/images/I/710pTFpn9YL.jpg');"></button>
+        <div class="ad-info">
+          <h3>Love Bird's Corner</h3>
+          <p>Special treats for your loved ones!</p>
+        </div>
+      </div>
+    </a>
+
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <!-- Contact Info Section -->
+      <div class="footer-section contact-info">
+        <p>Email: your.email@example.com</p>
+        <p>Phone: +1234567890</p>
+      </div>
+
+      <!-- Social Media Links Section -->
+      <div class="footer-section social-media">
+        <a href="https://facebook.com/yourprofile" target="_blank">Facebook</a>
+        <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+      </div>
+
+      <!-- Address Section with Google Maps Link -->
+      <div class="footer-section address">
+        <p>
+          <a href="https://maps.app.goo.gl/tFDAyFGRDBLETHD37" target="_blank">
+            Address:Ravi medical store, SVNIT Surat- 395007
+          </a>
+        </p>
+      </div>
+
+      <!-- Quick Links Section -->
+      <div class="footer-section quick-links">
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/blog">Blog</a>
+        <a href="/terms">Terms & Conditions</a>
+        <a href="/privacy">Privacy Policy</a>
+      </div>
+
+      <!-- Newsletter Section -->
+      <div class="footer-section newsletter">
+        <form action="/subscribe" method="POST">
+          <input type="email" name="email" placeholder="Subscribe to our newsletter" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- Copyright Section -->
+      <div class="footer-section copyright">
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
