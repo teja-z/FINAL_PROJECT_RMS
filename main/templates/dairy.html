@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Category Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Same navbar/header as home page */
+    header {
+      background-color:  #a7fff0;
+      color: rgb(0, 0, 0);
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: rgb(255, 255, 255);
+    }
+
+    /* Products Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    /* Each Product Card */
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s;
+      padding-bottom: 1rem;
+      position: relative;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      margin-top: 1rem;
+    }
+    .product-name {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      font-weight: 600;
+    }
+    .product-weight {
+      color: gray;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    .price-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .price {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 0.9rem;
+    }
+    .add-btn {
+      background-color: #0a5;
+      color: rgb(255, 255, 255);
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .add-btn:hover {
+      background-color: #087c4c;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Same header as home page -->
+  <header>Dairy & Bread :</header>
+  
+  <!-- Products Grid -->
+  <div class="products-grid">
+    
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/app/assets/products/sliding_images/jpeg/1c0db977-31ab-4d8e-abf3-d42e4a4b4632.jpg?ts=1706182142" alt="Maggi">
+      <div class="product-name">Amol Gold Full Cream Fresh Milk</div>
+      <div class="product-weight">500 ml</div>
+      <div class="price-row">
+        <div class="price">₹34  </div>
+        <div class="old-price">₹35</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/app/assets/products/sliding_images/jpeg/5ee4441d-9109-48fa-9343-f5ce82b905a6.jpg?ts=1706182143" alt="Maggi">
+      <div class="product-name">Amul Taaza Toned Fresh Milk </div>
+      <div class="product-weight">500 ml</div>
+      <div class="price-row">
+        <div class="price">₹27</div>
+        <div class="old-price">₹28</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/app/assets/products/sliding_images/jpeg/5d65d9dd-5548-4aa1-a5c1-8df190f8b315.jpg?ts=1723622553" alt="Maggi">
+      <div class="product-name">Maggi Masala-ae-Magic Sabzi</div>
+      <div class="product-weight">72 g</div>
+      <div class="price-row">
+        <div class="price">₹55</div>
+        <div class="old-price">₹60</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/app/assets/products/sliding_images/jpeg/b4bffc50-50c8-4ad9-8f56-bb3113d2ba83.jpg?ts=1723636764" alt="Maggi">
+      <div class="product-name">Super Crustless Big Slice White Bread</div>
+      <div class="product-weight">600 g</div>
+      <div class="price-row">
+        <div class="price">₹80</div>
+        <div class="old-price">₹84</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+        <!-- Product 5 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/app/images/products/sliding_image/373664a.jpg?ts=1704788858" alt="Maggi">
+      <div class="product-name">Kellogg's Double Chocolaty Fills Chocos (Crunchy Outside, Creamy Inside)</div>
+      <div class="product-weight">250 g</div>
+      <div class="price-row">
+        <div class="price">₹185</div>
+        <div class="old-price">₹205</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    <!-- Product 6 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/5a33f7f9-c840-439f-8c17-b7db18c2305f.jpg?ts=1731925622" alt="Maggi">
+      <div class="product-name">Kellogg's Corn Flakes with Immuno Nutrients</div>
+      <div class="product-weight">250 g</div>
+      <div class="price-row">
+        <div class="price">₹120</div>
+        <div class="old-price">₹125</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    <!-- Product 7-->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/63944a9d-9df7-487f-bcad-dcbd2f60c151.jpg?ts=1741162075" alt="Maggi">
+      <div class="product-name">Kellogg's Chocolate Muesli</div>
+      <div class="product-weight">450 g</div>
+      <div class="price-row">
+        <div class="price">₹344</div>
+        <div class="old-price">₹399</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    <!-- Product 8 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/app/assets/products/sliding_images/jpeg/e936d473-da05-4021-88cc-e2e158d8b581.jpg?ts=1718182904" alt="Maggi">
+      <div class="product-name">Kellogg's Muesli Fruit, Nut & Seeds - Pack of 2</div>
+      <div class="product-weight">2 X 750 g</div>
+      <div class="price-row">
+        <div class="price">₹772</div>
+        <div class="old-price">₹1040</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 9 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/74598a55-88df-4831-9858-ced43243caf8.jpg?ts=1741786503" alt="Maggi">
+      <div class="product-name">Kellogg's Oats</div>
+      <div class="product-weight">900 g</div>
+      <div class="price-row">
+        <div class="price">₹165</div>
+        <div class="old-price">₹170</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+        <!-- Product 10 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/app/assets/products/sliding_images/jpeg/fdc75876-f010-4814-a9d7-0c46f5511b51.jpg?ts=1708591840" alt="Maggi">
+      <div class="product-name">Quaker Rolled Instant Oats</div>
+      <div class="product-weight">400 g</div>
+      <div class="price-row">
+        <div class="price">₹86</div>
+        <div class="old-price">₹90</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+      <!-- Product 11 -->
+      <div class="product-card">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/app/images/products/sliding_image/123007a.jpg?ts=1688973208" alt="Maggi">
+        <div class="product-name">Gowardhan Classic Block Paneer2</div>
+        <div class="product-weight">200 g</div>
+        <div class="price-row">
+          <div class="price">₹80</div>
+          <div class="old-price">₹90</div>
+        </div>
+        <button class="add-btn">ADD</button>
+      </div>
+    
+        <!-- Product 12 -->
+        <div class="product-card">
+          <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/app/assets/products/sliding_images/jpeg/f793c3fd-dc65-49ce-bc39-a5fa7c3b4421.jpg?ts=1726473630" alt="Maggi">
+          <div class="product-name">Amul Fresh Malai Paneer</div>
+          <div class="product-weight">200 g</div>
+          <div class="price-row">
+            <div class="price">₹88</div>
+            <div class="old-price">₹90</div>
+          </div>
+          <button class="add-btn">ADD</button>
+        </div>
+  </div>
+  <script>
+    // Initialize cart in localStorage if not present
+    if (!localStorage.getItem("cart")) {
+      localStorage.setItem("cart", JSON.stringify([]));
+    }
+  
+    // Add to Cart Function
+    function addToCart(productName, productPrice) {
+      const cart = JSON.parse(localStorage.getItem("cart"));
+      cart.push({ name: productName, price: parseFloat(productPrice.replace('₹', '')) });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`${productName} added to cart!`);
+    }
+  
+    // Attach event listeners to all ADD buttons
+    document.querySelectorAll(".product-card").forEach(card => {
+      const name = card.querySelector(".product-name").textContent;
+      const price = card.querySelector(".price").textContent;
+      const btn = card.querySelector(".add-btn");
+      btn.addEventListener("click", () => addToCart(name, price));
+    });
+  </script>
+  
+
+</body>
+</html>

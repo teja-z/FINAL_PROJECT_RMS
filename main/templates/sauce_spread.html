@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Category Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Same navbar/header as home page */
+    header {
+      background-color:  #a7fff0;
+      color: rgb(0, 0, 0);
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: rgb(255, 255, 255);
+    }
+
+    /* Products Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    /* Each Product Card */
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s;
+      padding-bottom: 1rem;
+      position: relative;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      margin-top: 1rem;
+    }
+    .product-name {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      font-weight: 600;
+    }
+    .product-weight {
+      color: gray;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    .price-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .price {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 0.9rem;
+    }
+    .add-btn {
+      background-color: #0a5;
+      color: rgb(255, 255, 255);
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .add-btn:hover {
+      background-color: #087c4c;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Same header as home page -->
+  <header>Sauces and Jams :</header>
+
+  <!-- Products Grid -->
+  <div class="products-grid">
+    
+    <!-- Product 1 Ching's Secret Schezwan & Tomato Sauce Ketchup-->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=540/da/cms-assets/cms/product/0cf8f8d5-1f97-4117-91e0-5e2a22182e44.jpg?ts=1742387599" alt="Maggi">
+      <div class="product-name">Ching's Secret Schezwan & Tomato Sauce Ketchup</div>
+      <div class="product-weight">485 g</div>
+      <div class="price-row">
+        <div class="price">₹99</div>
+        <div class="old-price">₹120</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 2 Kissan Fresh Tomato Ketchup-->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/app/images/products/sliding_image/368445a.jpg?ts=1671599499" alt="ketchup">
+      <div class="product-name">Kissan Fresh Tomato Ketchup </div>
+      <div class="product-weight">850 g</div>
+      <div class="price-row">
+        <div class="price">₹100</div>
+        <div class="old-price">₹110</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 3 Maggi Rich Tomato Ketchup 960 g-->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/app/assets/products/sliding_images/jpeg/5d65d9dd-5548-4aa1-a5c1-8df190f8b315.jpg?ts=1723622553" alt="Maggi">
+      <div class="product-name">Maggi Rich Tomato Ketchup</div>
+      <div class="product-weight"> 960 g</div>
+      <div class="price-row">
+        <div class="price">₹149</div>
+        <div class="old-price">₹165</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 4 Ching's Secret Schezwan Chutney, Spread -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/4cc9f529-dd13-4325-81c3-9d8d4ee936ec.jpg?ts=1728026595" alt="chings schezwan">
+      <div class="product-name">Ching's Secret Schezwan Chutney, Spread</div>
+      <div class="product-weight">250 g</div>
+      <div class="price-row">
+        <div class="price">₹86</div>
+        <div class="old-price">₹90</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+        <!-- Product 5 Dr. Oetker FunFoods Veg Mayonnaise Original -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/fa410946-53a5-4557-b245-1495a24d1b32.jpg?ts=1717506811" alt="Mayonnaise">
+      <div class="product-name">Dr. Oetker FunFoods Veg Mayonnaise Original</div>
+      <div class="product-weight">100 g</div>
+      <div class="price-row">
+        <div class="price">₹49</div>
+        <div class="old-price">₹50</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    <!-- Product 6 Veeba Eggless Tandoori Flavoured Mayonnaise -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/app/images/products/sliding_image/479805a.jpg?ts=1687759080" alt="Mayonnaise">
+      <div class="product-name">Veeba Eggless Tandoori Flavoured Mayonnaise</div>
+      <div class="product-weight">250 g</div>
+      <div class="price-row">
+        <div class="price">₹101</div>
+        <div class="old-price">₹109</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    <!-- Product 7 MyFitness Chocolate Smooth Peanut Butter-->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/da/cms-assets/cms/product/49dd020e-43f0-4c8f-99f3-d513bd44bf37.jpg?ts=1735212910" alt="Maggi">
+      <div class="product-name">MyFitness Chocolate Smooth Peanut Butter</div>
+      <div class="product-weight">510 g</div>
+      <div class="price-row">
+        <div class="price">₹283</div>
+        <div class="old-price">₹339</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    <!-- Product 8 Pintola Dark Chocolate Creamy Peanut Butter-->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/a741e71c-1bb1-41b6-a4f0-56789659ca15.jpg?ts=1713777017" alt="Peanut Butter">
+      <div class="product-name">Pintola Dark Chocolate Creamy Peanut Butter</div>
+      <div class="product-weight">1 kg</div>
+      <div class="price-row">
+        <div class="price">₹438</div>
+        <div class="old-price">₹499</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 9 Kissan Mixed Fruit Jam -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/app/images/products/sliding_image/18934a.jpg?ts=1687262752" alt="jam">
+      <div class="product-name">Kissan Mixed Fruit Jam</div>
+      <div class="product-weight">700 g</div>
+      <div class="price-row">
+        <div class="price">₹251</div>
+        <div class="old-price">₹270</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 10 Hershey's Chocolate Syrup -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/454ab61a-73fb-4f3e-be55-9e48be780305.jpg?ts=1745081326" alt="Hershey's Chocolate Syrup">
+      <div class="product-name">Hershey's Chocolate Syrup</div>
+      <div class="product-weight">623 g</div>
+      <div class="price-row">
+        <div class="price">₹238</div>
+        <div class="old-price">₹250</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    <!-- Product 10 Hershey's Chocolate Syrup -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/454ab61a-73fb-4f3e-be55-9e48be780305.jpg?ts=1745081326" alt="Hershey's Chocolate Syrup">
+      <div class="product-name">Hershey's Chocolate Syrup</div>
+      <div class="product-weight">623 g</div>
+      <div class="price-row">
+        <div class="price">₹238</div>
+        <div class="old-price">₹250</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    <!-- Product 10 Hershey's Chocolate Syrup -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/454ab61a-73fb-4f3e-be55-9e48be780305.jpg?ts=1745081326" alt="Hershey's Chocolate Syrup">
+      <div class="product-name">Hershey's Chocolate Syrup</div>
+      <div class="product-weight">623 g</div>
+      <div class="price-row">
+        <div class="price">₹238</div>
+        <div class="old-price">₹250</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+     
+  </div>
+  <script>
+    // Initialize cart in localStorage if not present
+    if (!localStorage.getItem("cart")) {
+      localStorage.setItem("cart", JSON.stringify([]));
+    }
+  
+    // Add to Cart Function
+    function addToCart(productName, productPrice) {
+      const cart = JSON.parse(localStorage.getItem("cart"));
+      cart.push({ name: productName, price: parseFloat(productPrice.replace('₹', '')) });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`${productName} added to cart!`);
+    }
+  
+    // Attach event listeners to all ADD buttons
+    document.querySelectorAll(".product-card").forEach(card => {
+      const name = card.querySelector(".product-name").textContent;
+      const price = card.querySelector(".price").textContent;
+      const btn = card.querySelector(".add-btn");
+      btn.addEventListener("click", () => addToCart(name, price));
+    });
+  </script>
+
+</body>
+</html>

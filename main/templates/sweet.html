@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Category Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Same navbar/header as home page */
+    header {
+      background-color:  #a7fff0;
+      color: rgb(0, 0, 0);
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: rgb(255, 255, 255);
+    }
+
+    /* Products Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    /* Each Product Card */
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s;
+      padding-bottom: 1rem;
+      position: relative;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      margin-top: 1rem;
+    }
+    .product-name {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      font-weight: 600;
+    }
+    .product-weight {
+      color: gray;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    .price-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .price {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 0.9rem;
+    }
+    .add-btn {
+      background-color: #0a5;
+      color: rgb(255, 255, 255);
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .add-btn:hover {
+      background-color: #087c4c;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Same header as home page -->
+  <header>Sweet Tooth :</header>
+
+  <!-- Products Grid -->
+  <div class="products-grid">
+    
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/707fcedd-f16e-4bba-8fab-8579058b8aaf.jpg?ts=1739190571" alt="Maggi">
+      <div class="product-name">Farmley Date Bites Dry Fruit Burfi (No Added Sugar)</div>
+      <div class="product-weight">180 g</div>
+      <div class="price-row">
+        <div class="price">₹349 </div>
+        <div class="old-price">₹399</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/app/assets/products/sliding_images/jpeg/20b8d56f-0183-4634-99de-025185196114.jpg?ts=1723014490" alt="Maggi">
+      <div class="product-name">Soan Papdi by Haldiram's Nagpur </div>
+      <div class="product-weight">500 g</div>
+      <div class="price-row">
+        <div class="price">₹111</div>
+        <div class="old-price">₹130</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/da/cms-assets/cms/product/b9e1bb59-3832-49a6-b46c-077c388b1e34.jpg?ts=1743589432" alt="Maggi">
+      <div class="product-name">Ferrero Rocher Chocolate Gift Pack (24 pieces)</div>
+      <div class="product-weight">300 g</div>
+      <div class="price-row">
+        <div class="price">₹874</div>
+        <div class="old-price">₹950</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/da/cms-assets/cms/product/28a47fcf-1301-4cd2-a65f-9e2f402d9d13.jpg?ts=1729252391" alt="Maggi">
+      <div class="product-name">Ferrero Rocher Chocolate Gift Pack (4 pieces)</div>
+      <div class="product-weight">50 g</div>
+      <div class="price-row">
+        <div class="price">₹160</div>
+        <div class="old-price">₹189</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+        <!-- Product 5 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/da/cms-assets/cms/product/781f2159-f59d-4b85-a7d5-2679d4e3fd3f.jpg?ts=1728995236" alt="Maggi">
+      <div class="product-name">Havmor Dark Chocolate Ice Cream Cone - Pack of 2</div>
+      <div class="product-weight">2 x 110 ml</div>
+      <div class="price-row">
+        <div class="price">₹95</div>
+        <div class="old-price">₹105</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    <!-- Product 6 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/app/images/products/sliding_image/524380a.jpg?ts=1721026498" alt="Maggi">
+      <div class="product-name">Vadilal Matka Kulfi</div>
+      <div class="product-weight">100 ml</div>
+      <div class="price-row">
+        <div class="price">₹80</div>
+        <div class="old-price">₹85</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    <!-- Product 7-->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/da/cms-assets/cms/product/c240d8cf-11ee-4985-ae79-975e8e3eab23.jpg?ts=1743591957" alt="Maggi">
+      <div class="product-name">Cadbury Dairy Milk Bites Assorted Chocolate Pack - Almond</div>
+      <div class="product-weight">40 g</div>
+      <div class="price-row">
+        <div class="price">₹75</div>
+        <div class="old-price">₹100</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    <!-- Product 8 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/da/cms-assets/cms/product/bbf2ffec-2362-4b69-80d3-ed3b5cff5353.jpg?ts=1745561078" alt="Maggi">
+      <div class="product-name">Cadbury Fuse Mini Treats Chocolate Pack</div>
+      <div class="product-weight">150 g</div>
+      <div class="price-row">
+        <div class="price">₹120</div>
+        <div class="old-price">₹135</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 9 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/da/cms-assets/cms/product/9e8f9a41-5d08-4f5c-a1ab-77351e70719d.jpg?ts=1744618948" alt="Maggi">
+      <div class="product-name">Cadbury Dairy Milk Fruit & Nut Chocolate Bar</div>
+      <div class="product-weight">30 g</div>
+      <div class="price-row">
+        <div class="price">₹55</div>
+        <div class="old-price">₹60</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+        <!-- Product 10 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/da/cms-assets/cms/product/f015aaf5-3e50-4a9c-89ae-fb21eeac256b.jpg?ts=1734585374" alt="Maggi">
+      <div class="product-name">Nestle KitKat Chunky Caramel Wafer Chocolates</div>
+      <div class="product-weight">42 g</div>
+      <div class="price-row">
+        <div class="price">₹70</div>
+        <div class="old-price">₹80</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+      <!-- Product 11 -->
+      <div class="product-card">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/da/cms-assets/cms/product/a2269c78-92a5-4f2d-9d92-addfd4bec700.jpg" alt="Maggi">
+        <div class="product-name">The Whole Truth Protein Bar Hazelnut Cocoa</div>
+        <div class="product-weight">67 g</div>
+        <div class="price-row">
+          <div class="price">₹191</div>
+          <div class="old-price">₹200</div>
+        </div>
+        <button class="add-btn">ADD</button>
+      </div>
+    
+        <!-- Product 12 -->
+        <div class="product-card">
+          <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/da/cms-assets/cms/product/c8037825-e529-4824-83e2-f737aec864e0.jpg?ts=1739796747" alt="Maggi">
+          <div class="product-name">SuperYou Chocolate Wafer Protein Bar</div>
+          <div class="product-weight">40 g</div>
+          <div class="price-row">
+            <div class="price">₹60</div>
+            <div class="old-price">₹68</div>
+          </div>
+          <button class="add-btn">ADD</button>
+        </div>
+  </div>
+  <script>
+    // Initialize cart in localStorage if not present
+    if (!localStorage.getItem("cart")) {
+      localStorage.setItem("cart", JSON.stringify([]));
+    }
+  
+    // Add to Cart Function
+    function addToCart(productName, productPrice) {
+      const cart = JSON.parse(localStorage.getItem("cart"));
+      cart.push({ name: productName, price: parseFloat(productPrice.replace('₹', '')) });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`${productName} added to cart!`);
+    }
+  
+    // Attach event listeners to all ADD buttons
+    document.querySelectorAll(".product-card").forEach(card => {
+      const name = card.querySelector(".product-name").textContent;
+      const price = card.querySelector(".price").textContent;
+      const btn = card.querySelector(".add-btn");
+      btn.addEventListener("click", () => addToCart(name, price));
+    });
+  </script>
+
+</body>
+</html>

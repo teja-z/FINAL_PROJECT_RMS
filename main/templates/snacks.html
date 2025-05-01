@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Category Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Same navbar/header as home page */
+    header {
+      background-color:  #a7fff0;
+      color: rgb(0, 0, 0);
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: rgb(255, 255, 255);
+    }
+
+    /* Products Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    /* Each Product Card */
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s;
+      padding-bottom: 1rem;
+      position: relative;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      margin-top: 1rem;
+    }
+    .product-name {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      font-weight: 600;
+    }
+    .product-weight {
+      color: gray;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    .price-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .price {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 0.9rem;
+    }
+    .add-btn {
+      background-color: #0a5;
+      color: rgb(255, 255, 255);
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .add-btn:hover {
+      background-color: #087c4c;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Same header as home page -->
+  <header>Snacks and Munchies :</header>
+
+  <!-- Products Grid -->
+  <div class="products-grid">
+    
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/da/cms-assets/cms/product/a462e780-3f6f-47df-a451-1e63791d175b.jpg?ts=1740848082" alt="Maggi">
+      <div class="product-name">Kurkure Masala Munch Crisps</div>
+      <div class="product-weight">75 g</div>
+      <div class="price-row">
+        <div class="price">₹20
+        </div>
+        <!-- <div class="old-price">₹50</div> -->
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/app/assets/products/sliding_images/jpeg/28e2bfb3-ca64-432f-916e-32cac6ede709.jpg?ts=1726832118" alt="Maggi">
+      <div class="product-name">Lay's India's Magic Masala Potato Chips </div>
+      <div class="product-weight">67 g</div>
+      <div class="price-row">
+        <div class="price"> ₹30</div>
+        <!-- <div class="old-price">₹50</div> -->
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/app/images/products/sliding_image/132817a.jpg?ts=1676272121" alt="Maggi">
+      <div class="product-name">Kurkure Solid Masti Masala Twisteez Crisps</div>
+      <div class="product-weight">61 g</div>
+      <div class="price-row">
+        <div class="price">₹20</div>
+        <!-- <div class="old-price"> ₹20</div> -->
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/da/cms-assets/cms/product/01f742e6-fa7a-4dfa-97b9-cd901df4033b.jpg?ts=1740568991" alt="Maggi">
+      <div class="product-name">Lay's Chile Limon Flavour Potato Chips</div>
+      <div class="product-weight">48 g
+
+      </div>
+      <div class="price-row">
+        <div class="price">₹20</div>
+        <!-- <div class="old-price">₹47</div> -->
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+        <!-- Product 5 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/da/cms-assets/cms/product/a2269c78-92a5-4f2d-9d92-addfd4bec700.jpg" alt="Maggi">
+      <div class="product-name">The Whole Truth Protein Bar Hazelnut Cocoa</div>
+      <div class="product-weight">67 g</div>
+      <div class="price-row">
+        <div class="price">₹191</div>
+        <div class="old-price">₹200</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    <!-- Product 6 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/app/assets/products/sliding_images/jpeg/e68ca3de-8ebc-428f-b38d-da660d24cebd.jpg?ts=1716876840" alt="Maggi">
+      <div class="product-name">Doritos Cheese Nachos - Pack of 2</div>
+      <div class="product-weight">2 x 153 g</div>
+      <div class="price-row">
+        <div class="price">₹135 </div>
+        <div class="old-price">₹180</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    <!-- Product 7-->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/app/assets/products/sliding_images/jpeg/26af3491-5840-4335-a166-3730b5469ff7.jpg?ts=1721124946" alt="Maggi">
+      <div class="product-name">Balaji Tikha Mitha Mixture Namkeen</div>
+      <div class="product-weight">230 g</div>
+      <div class="price-row">
+        <div class="price">₹45</div>
+        <div class="old-price"> ₹50</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    <!-- Product 8 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/app/assets/products/sliding_images/jpeg/41a459d3-0cd0-4952-9cfc-33ccaaedb4a0.jpg?ts=1721125030" alt="Maggi">
+      <div class="product-name">Balaji Murmura Sev Bhujia</div>
+      <div class="product-weight">250 g</div>
+      <div class="price-row">
+        <div class="price">₹45</div>
+        <div class="old-price">₹48</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 9 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/app/assets/products/sliding_images/jpeg/a676c674-d48e-4734-9c14-12e95be8c086.jpg?ts=1721124830" alt="Maggi">
+      <div class="product-name">Balaji Moong Dal Namkeen</div>
+      <div class="product-weight">250 g</div>
+      <div class="price-row">
+        <div class="price">₹50</div>
+        <!-- <div class="old-price">₹135</div> -->
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+      
+  </div>
+  <script>
+    // Initialize cart in localStorage if not present
+    if (!localStorage.getItem("cart")) {
+      localStorage.setItem("cart", JSON.stringify([]));
+    }
+  
+    // Add to Cart Function
+    function addToCart(productName, productPrice) {
+      const cart = JSON.parse(localStorage.getItem("cart"));
+      cart.push({ name: productName, price: parseFloat(productPrice.replace('₹', '')) });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`${productName} added to cart!`);
+    }
+  
+    // Attach event listeners to all ADD buttons
+    document.querySelectorAll(".product-card").forEach(card => {
+      const name = card.querySelector(".product-name").textContent;
+      const price = card.querySelector(".price").textContent;
+      const btn = card.querySelector(".add-btn");
+      btn.addEventListener("click", () => addToCart(name, price));
+    });
+  </script>
+  
+
+</body>
+</html>

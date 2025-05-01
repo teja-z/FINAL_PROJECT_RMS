@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Category Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Same navbar/header as home page */
+    header {
+      background-color:  #a7fff0;
+      color: rgb(0, 0, 0);
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: rgb(255, 255, 255);
+    }
+
+    /* Products Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    /* Each Product Card */
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s;
+      padding-bottom: 1rem;
+      position: relative;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      margin-top: 1rem;
+    }
+    .product-name {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      font-weight: 600;
+    }
+    .product-weight {
+      color: gray;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    .price-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .price {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 0.9rem;
+    }
+    .add-btn {
+      background-color: #0a5;
+      color: rgb(255, 255, 255);
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .add-btn:hover {
+      background-color: #087c4c;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Same header as home page -->
+  <header>Tea Coffee & Health Drink :</header>
+
+  <!-- Products Grid -->
+  <div class="products-grid">
+    
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/da/cms-assets/cms/product/28b1bf23-1bc4-4b15-b8b0-4f66a11f5ba6.jpg?ts=1735300091" alt="Maggi">
+      <div class="product-name">Jivraj CTC Leaf Tea</div>
+      <div class="product-weight">250 g</div>
+      <div class="price-row">
+        <div class="price">₹140 </div>
+        <div class="old-price">₹210</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/app/assets/products/sliding_images/jpeg/4e4fbee6-eae5-4c83-8fe4-ee10535ad798.jpg?ts=1726835736" alt="Maggi">
+      <div class="product-name">Wagh Bakri Premium Tea (250 g)</div>
+      <div class="product-weight">250 g</div>
+      <div class="price-row">
+        <div class="price">₹150</div>
+        <div class="old-price">₹165</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/da/cms-assets/cms/product/cdac66b2-6f11-4631-b5be-8f99f5c2f122.jpg?ts=1732164878" alt="Maggi">
+      <div class="product-name">Nescafe Classic Black Roast Instant Coffee (Rich & Strong)</div>
+      <div class="product-weight">90 g</div>
+      <div class="price-row">
+        <div class="price">₹520</div>
+        <div class="old-price">₹637</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/da/cms-assets/cms/product/86eb6e6b-c369-4014-9899-31c7763d9728.jpg?ts=1739796449" alt="Maggi">
+      <div class="product-name">Bru Instant Coffee (100 g)</div>
+      <div class="product-weight">100 g</div>
+      <div class="price-row">
+        <div class="price">₹293</div>
+        <div class="old-price">₹325</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+        <!-- Product 5 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/da/cms-assets/cms/product/db2fb798-2106-4179-b67d-1948574371dd.jpg?ts=1741607221" alt="Maggi">
+      <div class="product-name">Organic India Tulsi Honey Chamomile Tea Bags</div>
+      <div class="product-weight">25 unit</div>
+      <div class="price-row">
+        <div class="price">₹220</div>
+        <div class="old-price">₹230</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    <!-- Product 6 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/app/images/products/sliding_image/187235a.jpg?ts=1698842648" alt="Maggi">
+      <div class="product-name">Lipton Honey Lemon Green Tea Bags</div>
+      <div class="product-weight">20 g</div>
+      <div class="price-row">
+        <div class="price">₹108</div>
+        <div class="old-price">₹116</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    
+  </div>
+  <script>
+    // Initialize cart in localStorage if not present
+    if (!localStorage.getItem("cart")) {
+      localStorage.setItem("cart", JSON.stringify([]));
+    }
+  
+    // Add to Cart Function
+    function addToCart(productName, productPrice) {
+      const cart = JSON.parse(localStorage.getItem("cart"));
+      cart.push({ name: productName, price: parseFloat(productPrice.replace('₹', '')) });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`${productName} added to cart!`);
+    }
+  
+    // Attach event listeners to all ADD buttons
+    document.querySelectorAll(".product-card").forEach(card => {
+      const name = card.querySelector(".product-name").textContent;
+      const price = card.querySelector(".price").textContent;
+      const btn = card.querySelector(".add-btn");
+      btn.addEventListener("click", () => addToCart(name, price));
+    });
+  </script>
+
+</body>
+</html>

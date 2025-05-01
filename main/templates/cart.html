@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart - RMS SVNIT</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background: #f5f5f5;
+    }
+    h1 {
+      margin-bottom: 1rem;
+    }
+    .cart-item {
+      background: white;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .cart-item span:first-child {
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-width: 100px;
+    }
+    .cart-item span:nth-child(2) {
+      flex-shrink: 0;
+      min-width: 80px;
+      text-align: right;
+    }
+    .remove-btn {
+      flex-shrink: 0;
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      color: red;
+      cursor: pointer;
+    }
+    .total {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+    .buy-btn {
+      margin-top: 1.5rem;
+      padding: 0.7rem 2rem;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .buy-btn:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Your Cart</h1>
+  <div id="cart-items"></div>
+  <div class="total" id="total-price"></div>
+  <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+
+  <script>
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const container = document.getElementById("cart-items");
+
+    updateCartDisplay();
+
+    function updateCartDisplay() {
+      container.innerHTML = "";
+      let total = 0;
+
+      if (cart.length === 0) {
+        container.innerHTML = "<p>Your cart is empty.</p>";
+      } else {
+        cart.forEach((item, index) => {
+          const quantity = item.quantity || 1;
+          const itemTotal = item.price * quantity;
+          const div = document.createElement("div");
+          div.className = "cart-item";
+          div.innerHTML = `
+            <span>${item.name} (x${quantity})</span>
+            <span>₹${itemTotal}</span>
+            <button class="remove-btn" onclick="removeItem(${index})">×</button>
+          `;
+          container.appendChild(div);
+          total += itemTotal;
+        });
+      }
+
+      document.getElementById("total-price").textContent = `Total: ₹${total}`;
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartDisplay();
+    }
+
+    function buyNow() {
+      if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+      }
+      alert("Proceeding to checkout...");
+      window.location.href = "{% url 'checkout' %}";
+    }
+  </script>
+</body>
+</html>

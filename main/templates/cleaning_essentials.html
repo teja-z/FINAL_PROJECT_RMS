@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Category Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Same navbar/header as home page */
+    header {
+      background-color:  #a7fff0;
+      color: rgb(0, 0, 0);
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: rgb(255, 255, 255);
+    }
+
+    /* Products Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    /* Each Product Card */
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s;
+      padding-bottom: 1rem;
+      position: relative;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      margin-top: 1rem;
+    }
+    .product-name {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      font-weight: 600;
+    }
+    .product-weight {
+      color: gray;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    .price-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .price {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 0.9rem;
+    }
+    .add-btn {
+      background-color: #0a5;
+      color: rgb(255, 255, 255);
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .add-btn:hover {
+      background-color: #087c4c;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Same header as home page -->
+  <header>Cleaning Essentials :</header>
+
+  <!-- Products Grid -->
+  <div class="products-grid">
+    
+    <!-- Product 1 Scotch Brite Stainless Steel Scrubber with 1 Scrub Pad -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=540/app/images/products/sliding_image/520325a.jpg" alt="Maggi">
+      <div class="product-name">Scotch Brite Stainless Steel Scrubber with 1 Scrub Pad</div>
+      <!-- <div class="product-weight">500 ml</div> -->
+      <div class="price-row">
+        <div class="price">₹30  </div>
+        <!-- <div class="old-price">₹35</div> -->
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 2 -->
+    <!-- Scotch Brite Tough Jet Scrub Pad (Plastic & Rubber, Red) -->
+
+    <div class="product-card">
+      <img src=https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=540/app/images/products/sliding_image/11274a.jpg?ts=1688472268 alt="Maggi">
+      <div class="product-name"> Scotch Brite Tough Jet Scrub Pad (Plastic & Rubber, Red)</div>
+      <!-- <div class="product-weight">500 ml</div> -->
+      <div class="price-row">
+        <div class="price">₹157</div>
+        <div class="old-price">170</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 3 -->
+<!-- Scotch Brite 2-in-1 Bucket Spin Mop with extra refill (Plastic) -->
+    <div class="product-card">
+      <img src=https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=540/app/images/products/sliding_image/481219a.jpg?ts=1688628167 alt="Maggi">
+      <div class="product-name">Scotch Brite 2-in-1 Bucket Spin Mop with extra refill (Plastic)</div>
+      <!-- <div class="product-weight">72 g</div> -->
+      <div class="price-row">
+        <div class="price">₹1,189</div>
+        <div class="old-price">₹1,800</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 4 -->
+     <!-- Scotch Brite Non Dust Broom / Jhadu (Fiber Blades) -->
+    <div class="product-card">
+      <img src=https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=540/app/assets/products/sliding_images/jpeg/93d39b9d-f2ed-44a4-ba85-94283c228a3d.jpg?ts=1708597804 alt="Maggi">
+      <div class="product-name">Super Crustless Big Slice White Bread</div>
+      <!-- <div class="product-weight">600 g</div> -->
+      <div class="price-row">
+        <div class="price">₹239</div>
+        <div class="old-price">₹375</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+        <!-- Product 5 -->
+
+    <div class="product-card">
+      <img src=https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=540/da/cms-assets/cms/product/1b10ee4f-bc20-4f92-96fd-f8497b0254cf.jpg?ts=1730115562alt="Maggi">
+      <div class="product-name">Harpic Disinfectant Liquid Toilet Cleaner - (Original) </div>
+      <div class="product-weight">500ml</div>
+      <div class="price-row">
+        <div class="price">₹110</div>
+        <!-- <div class="old-price">₹205</div> -->
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    <!-- Product 6 -->
+    <!-- Harpic Disinfectant Liquid Toilet Cleaner - (Original) - 500 ml -->
+
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/5a33f7f9-c840-439f-8c17-b7db18c2305f.jpg?ts=1731925622" alt="Maggi">
+      <div class="product-name">Kellogg's Corn Flakes with Immuno Nutrients</div>
+      <div class="product-weight">250 g</div>
+      <div class="price-row">
+        <div class="price">₹120</div>
+        <div class="old-price">₹125</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    <!-- Product 7-->
+    <!-- irwick Freshmatic Autospray Air Freshener Kit (Lavender & Lotus) -->
+
+  
+    <div class="product-card">
+      <img src=https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=540/da/cms-assets/cms/product/b5bc26fb-d7fe-4bc3-a7fd-a958ea31b922.jpg?ts=1730962949 alt="Maggi">
+      <div class="product-name">Airwick Freshmatic Autospray Air Freshener Kit (Lavender & Lotus)</div>
+      <!-- <div class="product-weight">450 g</div> -->
+      <div class="price-row">
+        <div class="price">₹359</div>
+        <!-- <div class="old-price">₹399</div> -->
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+
+    <!-- Product 8 -->
+    <!-- Comfort After Wash Fabric Conditioner (Lily Fresh) -->
+
+
+
+    <div class="product-card">
+      <img src=https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=540/da/cms-assets/cms/product/6ee5fc14-98a4-4248-a148-6f213ad20583.jpg?ts=1735215761alt="Maggi">
+      <div class="product-name">Comfort After Wash Fabric Conditioner (Lily Fresh)
+    </div>
+      <div class="product-">2 X 750 g</div>
+      <div class="price-row">
+        <div class="price">₹375</div>
+        <div class="old-price">₹435</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 9 -->
+
+    <!-- Dettol Liquid Disinfectant (Menthol Cool) -->
+    <div class="product-card">
+      <img src=https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=540/app/images/products/sliding_image/373195a.jpg?ts=1690815110 alt="Maggi">
+      <div class="product-name">Scotch Brite Stainless Steel Scrubber with 1 Scrub Pad
+    </div>
+       <div class="product-weight">550ml</div> 
+      <div class="price-row">
+        <div class="price">₹242</div>
+         <div class="old-price">₹256</div> 
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+        <!-- Product 10 -->
+        <!-- Godrej Aer Power Pocket Air Freshener - Pack of 5 -->
+    <!-- <div class="product-card">
+      <img src=https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/app/assets/products/sliding_images/jpeg/8633e2ed-ee65-435c-9f09-2139560b3c68.jpg?ts=1716959936 alt="Maggi">
+      <div class="product-name"></div> -->
+      <!-- <div class="product-weight">400 g</div> -->
+      <!-- <div class="price-row">
+        <div class="price">₹277</div>
+        <div class="old-price">₹325</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div> -->
+      <!-- Product 11 -->
+    </div>
+    <script>
+      // Initialize cart in localStorage if not present
+      if (!localStorage.getItem("cart")) {
+        localStorage.setItem("cart", JSON.stringify([]));
+      }
+    
+      // Add to Cart Function
+      function addToCart(productName, productPrice) {
+        const cart = JSON.parse(localStorage.getItem("cart"));
+        cart.push({ name: productName, price: parseFloat(productPrice.replace('₹', '')) });
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(`${productName} added to cart!`);
+      }
+    
+      // Attach event listeners to all ADD buttons
+      document.querySelectorAll(".product-card").forEach(card => {
+        const name = card.querySelector(".product-name").textContent;
+        const price = card.querySelector(".price").textContent;
+        const btn = card.querySelector(".add-btn");
+        btn.addEventListener("click", () => addToCart(name, price));
+      });
+    </script>
+  
+  </body>
+  </html>
+   
+        

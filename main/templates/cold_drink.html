@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Category Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Same navbar/header as home page */
+    header {
+      background-color:  #a7fff0;
+      color: rgb(0, 0, 0);
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: rgb(255, 255, 255);
+    }
+
+    /* Products Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    /* Each Product Card */
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s;
+      padding-bottom: 1rem;
+      position: relative;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      margin-top: 1rem;
+    }
+    .product-name {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      font-weight: 600;
+    }
+    .product-weight {
+      color: gray;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    .price-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .price {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 0.9rem;
+    }
+    .add-btn {
+      background-color: #0a5;
+      color: rgb(255, 255, 255);
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .add-btn:hover {
+      background-color: #087c4c;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Same header as home page -->
+  <header>Cold Drinks And Juices :</header>
+
+  <!-- Products Grid -->
+  <div class="products-grid">
+    
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/app/assets/products/sliding_images/jpeg/e69c587d-802a-40eb-a40b-a6bc9623526d.jpg?ts=1707312325" alt="Maggi">
+      <div class="product-name">Thums Up Soft Drink (750 ml)</div>
+      <div class="product-weight">750 ml</div>
+      <div class="price-row">
+        <div class="price">₹45 </div>
+        <div class="old-price">₹50</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/app/assets/products/sliding_images/jpeg/0f87f19e-66da-48cd-8c75-343abf732948.jpg?ts=1707312325" alt="Maggi">
+      <div class="product-name">Sprite Lime Flavored Soft Drink 750 ml </div>
+      <div class="product-weight">750 ml</div>
+      <div class="price-row">
+        <div class="price">₹45</div>
+        <div class="old-price">₹50</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/app/images/products/sliding_image/15288a.jpg?ts=1698840601" alt="Maggi">
+      <div class="product-name">Coca-Cola Diet Coke Soft Drink</div>
+      <div class="product-weight">300 ml</div>
+      <div class="price-row">
+        <div class="price">₹40</div>
+        <div class="old-price">₹43</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/app/assets/products/sliding_images/jpeg/6b98633c-7c6a-4708-a372-e2b49da568ab.jpg?ts=1707312322" alt="Maggi">
+      <div class="product-name">Coca-Cola Soft Drink (750 ml)</div>
+      <div class="product-weight">750 ml</div>
+      <div class="price-row">
+        <div class="price">₹45</div>
+        <div class="old-price">₹47</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+        <!-- Product 5 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/app/images/products/sliding_image/86521a.jpg?ts=1687948913" alt="Maggi">
+      <div class="product-name">Fanta Orange Soft Drink</div>
+      <div class="product-weight">750 ml</div>
+      <div class="price-row">
+        <div class="price">₹45</div>
+        <div class="old-price">₹47</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    <!-- Product 6 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/da/cms-assets/cms/product/538a98dd-25ed-4e16-bb23-656418428787.jpg?ts=1732191225" alt="Maggi">
+      <div class="product-name">Thums Up Soft Drink (300 ml)</div>
+      <div class="product-weight">300 ml</div>
+      <div class="price-row">
+        <div class="price">₹40</div>
+        <div class="old-price">₹42</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    <!-- Product 7-->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/app/assets/products/sliding_images/jpeg/0ad88094-c4ea-48fd-b866-46da87d6739d.jpg?ts=1711970525" alt="Maggi">
+      <div class="product-name">Pepsi Soft Drink</div>
+      <div class="product-weight">750 ml</div>
+      <div class="price-row">
+        <div class="price">₹40</div>
+        <div class="old-price">₹42</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    <!-- Product 8 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/da/cms-assets/cms/product/22455cae-b2bd-49bd-a058-0eeff8f81d0b.jpg?ts=1731326293" alt="Maggi">
+      <div class="product-name">Mountain Dew Grip Soft Drink</div>
+      <div class="product-weight">750 ml</div>
+      <div class="price-row">
+        <div class="price">₹40</div>
+        <div class="old-price">₹42</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 9 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/da/cms-assets/cms/product/cf9e584a-aae1-4172-a4b7-bf74c2a60930.jpg?ts=1741698449" alt="Maggi">
+      <div class="product-name">Real Fruit Power Cranberry Juice</div>
+      <div class="product-weight">1 ltr</div>
+      <div class="price-row">
+        <div class="price">₹130</div>
+        <div class="old-price">₹135</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+        <!-- Product 10 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/da/cms-assets/cms/product/a7adb397-3928-47e3-83f3-029059433b82.jpg?ts=1742278833" alt="Maggi">
+      <div class="product-name">Real Fruit Power Guava Juice</div>
+      <div class="product-weight">1 ltr</div>
+      <div class="price-row">
+        <div class="price">₹105</div>
+        <div class="old-price">₹110</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+      <!-- Product 11 -->
+      <div class="product-card">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/app/assets/products/sliding_images/jpeg/e24eda9c-3cc7-4e66-bc2b-80383eb85a80.jpg?ts=1715152398" alt="Maggi">
+        <div class="product-name">Frooti Mango Drink</div>
+        <div class="product-weight">125 ml</div>
+        <div class="price-row">
+          <div class="price">₹10</div>
+          <!-- <div class="old-price">₹90</div> -->
+        </div>
+        <button class="add-btn">ADD</button>
+      </div>
+    
+        <!-- Product 12 -->
+        <div class="product-card">
+          <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/da/cms-assets/cms/product/b2d8e837-8765-42f4-9af1-835ad70f518b.jpg?ts=1743063287" alt="Maggi">
+          <div class="product-name">Nescafe Ready to Drink Choco Mocha Cold Coffee Flavoured Milk</div>
+          <div class="product-weight">180 ml</div>
+          <div class="price-row">
+            <div class="price">₹40</div>
+            <div class="old-price">₹42</div>
+          </div>
+          <button class="add-btn">ADD</button>
+        </div>
+  </div>
+  <script>
+    // Initialize cart in localStorage if not present
+    if (!localStorage.getItem("cart")) {
+      localStorage.setItem("cart", JSON.stringify([]));
+    }
+  
+    // Add to Cart Function
+    function addToCart(productName, productPrice) {
+      const cart = JSON.parse(localStorage.getItem("cart"));
+      cart.push({ name: productName, price: parseFloat(productPrice.replace('₹', '')) });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`${productName} added to cart!`);
+    }
+  
+    // Attach event listeners to all ADD buttons
+    document.querySelectorAll(".product-card").forEach(card => {
+      const name = card.querySelector(".product-name").textContent;
+      const price = card.querySelector(".price").textContent;
+      const btn = card.querySelector(".add-btn");
+      btn.addEventListener("click", () => addToCart(name, price));
+    });
+  </script>
+  
+
+</body>
+</html>
