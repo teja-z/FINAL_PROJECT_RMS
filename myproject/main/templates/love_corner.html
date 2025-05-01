@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Category Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Same navbar/header as home page */
+    header {
+      background-color:  #a7fff0;
+      color: rgb(0, 0, 0);
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: rgb(255, 255, 255);
+    }
+
+    /* Products Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    /* Each Product Card */
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s;
+      padding-bottom: 1rem;
+      position: relative;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      margin-top: 1rem;
+    }
+    .product-name {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      font-weight: 600;
+    }
+    .product-weight {
+      color: gray;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    .price-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .price {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 0.9rem;
+    }
+    .add-btn {
+      background-color: #0a5;
+      color: rgb(255, 255, 255);
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .add-btn:hover {
+      background-color: #087c4c;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Same header as home page -->
+  <header>Love bird's Corner :</header>
+
+  <!-- Products Grid -->
+  <div class="products-grid">
+    
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/9e8f9a41-5d08-4f5c-a1ab-77351e70719d.jpg?ts=1744618948" alt="Maggi">
+      <div class="product-name">Cadbury Dairy Milk Silk Chocolate Bar</div>
+      <div class="product-weight">60 g</div>
+      <div class="price-row">
+        <div class="price">₹105 </div>
+        <div class="old-price">₹110</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/c49137ce-c3a3-43df-9be7-e4cffea521ed.jpg?ts=1739092668" alt="Maggi">
+      <div class="product-name">Milka Pralines Chocolate Gift Pack </div>
+      <div class="product-weight">110 g</div>
+      <div class="price-row">
+        <div class="price">₹799</div>
+        <div class="old-price">₹849</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/ad6a2e5b-fcfd-4578-beab-417bce7061ae.jpg?ts=1738756431" alt="Maggi">
+      <div class="product-name">Tied Ribbons Hug Couple Showpiece</div>
+      <div class="product-weight">1 unit</div>
+      <div class="price-row">
+        <div class="price">₹199 </div>
+        <div class="old-price">₹249</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/5c024891-4954-4c46-bf02-835d6aeb8305.jpg?ts=1736917932" alt="Maggi">
+      <div class="product-name">Sapphire Hazelfills Chocolate Gift Pack</div>
+      <div class="product-weight">215 g</div>
+      <div class="price-row">
+        <div class="price">₹360 </div>
+        <div class="old-price">₹400</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+
+        <!-- Product 5 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/9e176e41-c79b-455b-8cfc-080a028a41c8.jpg?ts=1737613609" alt="Maggi">
+      <div class="product-name">Votive Scented Candle (Rasberry, Red) by Auradecor</div>
+      <div class="product-weight">1 set (6 pieces)</div>
+      <div class="price-row">
+        <div class="price">₹160</div>
+        <div class="old-price">₹180</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    <!-- Product 6 -->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/fd37ee5d-61b5-43db-883a-b5538b201050.jpg" alt="Maggi">
+      <div class="product-name">Tied Ribbons Artificial Rose Bunch (Pink)</div>
+      <div class="product-weight">1 pack (12 pieces)</div>
+      <div class="price-row">
+        <div class="price">₹499</div>
+        <div class="old-price">₹599</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    <!-- Product 7-->
+    <div class="product-card">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/612731f0-085d-4ec0-8cce-ba3735065efa.jpg" alt="Maggi">
+      <div class="product-name">Voylla Valentine's Day Gift Hamper for Boy Friend</div>
+      <div class="product-weight">1 set (3 pieces)</div>
+      <div class="price-row">
+        <div class="price">₹689</div>
+        <div class="old-price">₹749</div>
+      </div>
+      <button class="add-btn">ADD</button>
+    </div>
+    
+  </div>
+  <script>
+    // Initialize cart in localStorage if not present
+    if (!localStorage.getItem("cart")) {
+      localStorage.setItem("cart", JSON.stringify([]));
+    }
+  
+    // Add to Cart Function
+    function addToCart(productName, productPrice) {
+      const cart = JSON.parse(localStorage.getItem("cart"));
+      cart.push({ name: productName, price: parseFloat(productPrice.replace('₹', '')) });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`${productName} added to cart!`);
+    }
+  
+    // Attach event listeners to all ADD buttons
+    document.querySelectorAll(".product-card").forEach(card => {
+      const name = card.querySelector(".product-name").textContent;
+      const price = card.querySelector(".price").textContent;
+      const btn = card.querySelector(".add-btn");
+      btn.addEventListener("click", () => addToCart(name, price));
+    });
+  </script>
+
+</body>
+</html>
